@@ -1,5 +1,8 @@
 <%# add navigation links to this file %>
 <% if user_signed_in? %>
+  <li><%= form_tag do %>
+	  <%= text_field_tag "search", nil, placeholder: "Search",:class=>"form-control", autocomplete: :off %>
+	<% end %></li>
   <li><%= link_to 'Edit account', edit_user_registration_path %></li>
   <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
 <% else %>

@@ -12,8 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.soulmate
 //= require private_pub
 //= require chat
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require_tree .
+//= require users_search.js
+// require custom.js
+// require_tree .
+// require fullcalendar_engine/application
+// require fullcalendar.min.js

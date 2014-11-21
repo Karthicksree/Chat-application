@@ -32,6 +32,11 @@ gem 'devise'
 gem 'private_pub'
 gem 'thin'
 
+gem 'faker', github: 'stympy/faker'
+gem 'rack-contrib'
+gem 'soulmate', :require => 'soulmate/server'
+gem 'fullcalendar_engine'
+
 group :development do
   gem 'rails_layout'
   gem "better_errors"

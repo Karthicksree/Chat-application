@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
+  mount Soulmate::Server, :at => "/autocomplete"
+
+
+  # resources :users
+  
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+
 
    authenticated :user do
     root 'users#index'
@@ -19,7 +25,8 @@ Rails.application.routes.draw do
   resources :conversations do
     resources :messages
   end
-
+  
+   mount FullcalendarEngine::Engine => "/calendar"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
