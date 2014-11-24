@@ -37,6 +37,15 @@ gem 'rack-contrib'
 gem 'soulmate', :require => 'soulmate/server'
 gem 'fullcalendar_engine'
 
+gem 'rapidfire'
+
+gem 'rolify'
+gem 'annotate'
+
+gem 'grape'
+gem 'grape-rabl'
+gem 'rack-cors', :require => 'rack/cors'
+
 group :development do
   gem 'rails_layout'
   gem "better_errors"

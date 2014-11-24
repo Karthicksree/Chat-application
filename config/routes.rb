@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
+
+  mount API::ApplicationAPI => '/api'
+  resources :posts
+
   mount Soulmate::Server, :at => "/autocomplete"
+  mount Rapidfire::Engine => "/rapidfire"
 
-
-  # resources :users
+  resources :users
   
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
@@ -27,6 +31,8 @@ Rails.application.routes.draw do
   end
   
    mount FullcalendarEngine::Engine => "/calendar"
+
+    
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
